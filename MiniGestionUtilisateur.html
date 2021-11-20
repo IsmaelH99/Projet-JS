@@ -14,6 +14,10 @@
          .btn-sm {
             background-color: aqua;
          }
+         .text-center {
+            margin-top: 2%;
+            margin-bottom: 2%;
+         }
       </style>
    </head>
 
@@ -55,20 +59,6 @@
                            <li class="nav-item">
                               <a class="nav-link" href="#">TodoList/Galerie</a>
                            </li>
-                           <form class="d-flex">
-                              <input
-                                 class="form-control me-2"
-                                 type="search"
-                                 placeholder="Search"
-                                 aria-label="Search"
-                              />
-                              <button
-                                 class="btn btn-outline-light"
-                                 type="submit"
-                              >
-                                 Search
-                              </button>
-                           </form>
                         </ul>
                      </div>
                   </div>
@@ -77,18 +67,22 @@
          </div>
       </section>
 
-      <h1>"Bienvenue sur le gestionnaire des utilisateur"</h1>
+      <h1 class="text-center">
+         "Bienvenue sur le gestionnaire des utilisateur"
+      </h1>
 
       <section>
          <!-- Button trigger modal -->
-         <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-         >
-            Ajouter un utilisateur
-         </button>
+         <div class="text-center">
+            <button
+               type="button"
+               class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#exampleModal"
+            >
+               Ajouter un utilisateur
+            </button>
+         </div>
 
          <!-- Modal -->
          <div
