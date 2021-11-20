@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Mini Gestion Utilisateur</title>
+    <!--
+    <style>
+        body{
+            background-image: url(https://media.istockphoto.com/vectors/geometric-colorful-gradient-background-template-vector-id1172689378?k=20&m=1172689378&s=612x612&w=0&h=e2p0ZMiGiKJE2rtkNUyDoqk_TSSTD1gFHpOi8BzKdnc=);
+            background-size: cover;
+        }
+    </style>-->
+</head>
+
+<body>
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand mb-0 h1" href="MiniGestionUtilisateur.html">Projet</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page"
+                                        href="MiniGestionUtilisateur.html">Mini Gestion Utilisateur</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">TodoList/Galerie</a>
+                                </li>
+                                <form class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-outline-light" type="submit">Search</button>
+                                </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <h1>"Bienvenue sur le gestionnaire des utilisateur"</h1>
+
+    <section>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Ajouter un utilisateur
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Veuillez remplir le formulaire SVP !!!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleInputEmail1" class="form-label"><b>Prénom *</b></label>
+                                <input id="text-add-prenom" type="text" class="form-control" aria-label="First name" required>
+                            </div>
+                            <div class="col">
+                                <label for="exampleInputEmail1" class="form-label"><b>Nom *</b></label>
+                                <input id="text-add-nom" type="text" class="form-control" aria-label="Last name" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label"><b>Adresse email *</b></label>
+                            <input id="text-add-mail" type="email" class="form-control" id="formGroupExampleInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label"><b>Poste *</b></label>
+                            <input id="text-add-poste" type="text" class="form-control" id="formGroupExampleInput2" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <button id="btn-add-user" type="submit" class="btn btn-primary">Enregistrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <section class="table-responsive">
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                            <tr>
+                                <th>Prénom</th>
+                                <th>Nom</th>
+                                <th>Adresse mail</th>
+                                <th>Poste</th>
+                                <th>Supprimer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="lig" >
+                                <td id="list-prenom"></td>
+                                <td id="list-nom"></td>
+                                <td id="list-mail"></td>
+                                <td id="list-poste"></td>
+                                <td><button id="supp" type="button" class="btn btn-primary btn-sm">Supp</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/MiniGestionUtilisateur.js"></script>
+</body>
+
+</html>
