@@ -1,6 +1,6 @@
 class GalerieComp extends HTMLElement {
     static get observedAttributes() {
-        return ['message']
+        return ['photo']
     }
 
     attributeChangedCallback(property, oldValue, newValue) {
@@ -26,37 +26,9 @@ class GalerieComp extends HTMLElement {
         section.appendChild(article)
         main.appendChild(section)
         this.appendChild(main)
-
-
-
-
-        // const sectionMin = document.createElement("section")
-        // sectionMin.setAttribute("class", "row")
-        // const articleMin = document.createElement("article")
-        // articleMin.setAttribute('class', 'small')
-        // const imgMin = document.createElement('img')
-        // imgMin.setAttribute('class', 'img-fluid photo')
-        // articleMin.appendChild(imgMin)
-        // sectionMin.appendChild(articleMin)
-        // this.appendChild(sectionMin)
-        // console.log(this.message)
-
-        // var images = document.getElementsByClassName("photo");
-        // console.log(images)
-        // for (var i = 0; i < images.length; i++) {
-        //     console.log(images[0])
-        //     images[i].addEventListener("click", function () {
-        //         alert()
-        //         // var source = this.getAttribute("src");
-
-        //         // document.getElementById("big-img").setAttribute("src", source);
-
-        //     });
-
-        // }
     }
     connectedCallback() {
-        var imgMiniature = this.message.split(" ")
+        var imgMiniature = this.photo.split(" ")
         const sectionMin = document.createElement("section")
         sectionMin.setAttribute("class", "row")
         for (let i = 0; i < imgMiniature.length; i++) {
@@ -71,14 +43,9 @@ class GalerieComp extends HTMLElement {
             this.appendChild(sectionMin)
 
             imgMin.addEventListener("click", function () {
-                // alert()
                 var source = this.getAttribute("src");
-
                 document.getElementById("big-img").setAttribute("src", source);
-
             });
-
-
         }
     }
 
