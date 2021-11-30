@@ -1,4 +1,5 @@
 class GalerieComp extends HTMLElement {
+
     static get observedAttributes() {
         return ['photo']
     }
@@ -51,4 +52,4 @@ class GalerieComp extends HTMLElement {
 
 }
 
-customElements.define('galerie-comp', GalerieComp)
+customElements.define("galerie-comp", GalerieComp);
